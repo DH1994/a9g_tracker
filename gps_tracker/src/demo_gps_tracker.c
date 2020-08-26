@@ -381,7 +381,7 @@ void gps_testTask(void *pData)
                 {
                     Trace(1,"send location to server success");
                     Trace(1,"response:%s",buffer);
-                    UART_Write(UART1,,strlen(buffer));
+                    UART_Write(UART1,buffer,strlen(buffer));
                 }
                 GPIO_Set(UPLOAD_DATA_LED,GPIO_LEVEL_LOW);
             }
